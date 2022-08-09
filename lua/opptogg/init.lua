@@ -10,7 +10,6 @@ local opptogg = {
     ["Yes"]   = "No",
     ["foo"]   = "bar",
     ["var1"]  = "var2",
-    ["print"] = "input",
 
     -- TODO: the regex \k doesn't capture these
     -- opps["+"]    = "-"
@@ -20,7 +19,8 @@ local opptogg = {
   mapping = '',
 }
 
--- TODO: move to the setup.lua file and then call the file here
+
+-- If there's a user config, pass it and override defaults
 
 local exists = function(key)
   for k, _ in pairs(opptogg) do
@@ -81,15 +81,16 @@ function opptogg.setup(opts)
   end
 
   remap()
-
 end
+
 
 function opptogg.return_opp_table()
   return opptogg['opp_table']
 end
 
-local user_cmd = vim.api.nvim_create_user_command
 
+-- Define a vim command to call the toggle function.
+local user_cmd = vim.api.nvim_create_user_command
 user_cmd(
   'OppTogg',
   function()
@@ -97,8 +98,6 @@ user_cmd(
   end,
   { nargs = 0 }
 )
-
-
 
 
 return opptogg

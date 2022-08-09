@@ -3,11 +3,9 @@ local api = vim.api
 local toggle = {}
 
 function toggle.toggle()
-  -- TODO: allow user to pass their own table
   local opp_table = require('opptogg').return_opp_table()
 
   -- Set word under cursor to 'cursorword'
-
   -- NOTE: this code came from:
   -- https://github.com/xiyaowong/nvim-cursorword/blob/master/plugin/nvim-cursorword.lua)
 

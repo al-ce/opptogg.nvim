@@ -1,0 +1,53 @@
+================================================================================
+
+INTRODUCTION
+                                                                *opptogg.nvim*
+This plugin toggles the word under cursor to its "opposite" as defined by the 
+table passed to its toggle function. It comes with a default table of opposing
+pairs which can 
+be overridden by the user's config.
+
+FUNCTIONS
+                                                             *opptogg.setup()*
+opptogg.setup({table})
+
+    This function allows the user to override the default config by passing it 
+    a table of {key} = {value}.
+
+    In the {key} 'opp_table', the user can define a custom set of {lhs} = {rsh} 
+    pairs that can be toggled by `:OppToggle`.
+
+    In the key {mapping}, the user can define a {string} to map the command 
+    `:OppToggle` (no default map is set).
+>
+      require('opptogg').setup({
+        opp_table = {
+          ["True"]  = "False",
+          ["true"]  = "false",
+          ["0"]     = "1",
+          ["yes"]   = "no",
+          ["Yes"]   = "No",
+          ["foo"]   = "bar",
+          ["var1"]  = "var2",
+        },
+        mapping = '<leader>`',
+
+      })
+<
+COMMANDS
+                                                                    *:OppTogg*
+:OppTogg
+
+    Toggles the word under the cursor to its "opposite" value deifned in 
+    *opptog.setup()*.
+    As of this commit, the word under the cursor can only contain characters 
+    captured by the regex '\k'.
+
+
+ABOUT
+                                                               *OppTogg-about*
+
+'https://github.com/fennelcakes/opptogg.nvim'
+
+vim:tw=78:ts=8:ft=help:norl:
+
