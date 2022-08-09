@@ -20,12 +20,13 @@ use({
 ## Usage
 
 Set the cursor over a word in OppTogg's table and execute `:OppTogg` to 
-substitute its 'opposite'. Example (where `*` denotes cursor position):
+substitute its 'opposite'. The cursor remains in its current position.
+Example (where `*` denotes cursor position):
 
 ```
 Before               | After
 ------------------------------------------
-if foo == tr*ue:     | if foo == false
+if foo == tr*ue:     | if foo == fa*lse
 ```
 
 ## Configuration
