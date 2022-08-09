@@ -6,8 +6,8 @@ function toggle.toggle()
   local opp_table = require('opptogg').return_opp_table()
 
   -- Set word under cursor to 'cursorword'
-  -- NOTE: this code came from:
-  -- https://github.com/xiyaowong/nvim-cursorword/blob/master/plugin/nvim-cursorword.lua)
+  -- NOTE: this section of code came from:
+  -- https://github.com/xiyaowong/nvim-cursorword/blob/master/plugin/nvim-cursorword.lua
 
   local function matchstr(...)
     local ok, ret = pcall(vim.fn.matchstr, ...)
@@ -45,7 +45,7 @@ function toggle.toggle()
   end
 
   -- If nothing matched the opposites table, notify
-  vim.notify('OppTogg: no opposing value found under cursor', 3)
+  vim.notify('[OppTogg]: no opposing value found under cursor', 3)
 
 end
 
