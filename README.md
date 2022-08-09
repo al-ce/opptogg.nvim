@@ -24,9 +24,9 @@ substitute its 'opposite'. The cursor remains in its current position.
 Example (where `*` denotes cursor position):
 
 ```
-Before               | After
-------------------------------------------
-if foo == tr*ue:     | if foo == fa*lse
+Before            | After
+------------------|--------------------
+if foo == tr*ue:  | if foo == fa*lse:
 ```
 
 ## Configuration
