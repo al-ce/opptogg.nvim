@@ -1,12 +1,12 @@
 local api = vim.api
 
-local toggle = {}
+local M = {}
 
-function toggle.toggle()
+function M.main()
   local opp_table = require('opptogg').return_opp_table()
 
   -- Set word under cursor to 'cursorword'
-  -- NOTE: this section of code came from:
+  -- NOTE: this code came from:
   -- https://github.com/xiyaowong/nvim-cursorword/blob/master/plugin/nvim-cursorword.lua
 
   local function matchstr(...)
@@ -49,4 +49,4 @@ function toggle.toggle()
 
 end
 
-return toggle
+return M

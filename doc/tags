@@ -1,0 +1,4 @@
+:OppTogg	opptogg.txt	/*:OppTogg*
+OppTogg-about	opptogg.txt	/*OppTogg-about*
+opptogg.nvim	opptogg.txt	/*opptogg.nvim*
+opptogg.setup()	opptogg.txt	/*opptogg.setup()*

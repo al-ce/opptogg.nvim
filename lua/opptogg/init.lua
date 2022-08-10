@@ -20,8 +20,8 @@ local opptogg = {
 }
 
 
--- If there's a user config, pass it and override defaults
 
+-- Check that user's config  is set up correctly
 local exists = function(key)
   for k, _ in pairs(opptogg) do
     if key == k then
@@ -59,6 +59,7 @@ local remap = function()
 end
 
 
+-- If there's a user config, pass it and override defaults
 function opptogg.setup(opts)
   opts = opts or {}
 
@@ -94,7 +95,7 @@ local user_cmd = vim.api.nvim_create_user_command
 user_cmd(
   'OppTogg',
   function()
-    require('opptogg.toggle').toggle()
+    require('opptogg.toggle').main()
   end,
   { nargs = 0 }
 )
