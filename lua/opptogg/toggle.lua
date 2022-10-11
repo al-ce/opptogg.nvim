@@ -27,9 +27,10 @@ function M.main()
 
   local function toggle_word(output)
     local cursor = api.nvim_win_get_cursor(0)
-    vim.cmd({
-      cmd = 'norm', args = { 'ciw' .. output }
-    })
+    vim.cmd('normal ciw'..output)
+    -- vim.cmd {
+    --   cmd = 'norm!', args = { 'ciw' .. output }
+    -- }
     api.nvim_win_set_cursor(0, cursor)
   end
 
@@ -50,3 +51,5 @@ function M.main()
 end
 
 return M
+
+-- yes no
