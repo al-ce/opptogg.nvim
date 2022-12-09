@@ -8,7 +8,7 @@ With packer:
 
 ```lua
 use({
-  "fennelcakes/opptogg.nvim",
+  "al-ce/opptogg.nvim",
   config = function()
     require('opptogg').setup({
     -- config or leave empty for defaults
